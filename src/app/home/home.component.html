@@ -1,30 +1,24 @@
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img
-    width="40"
-    alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-  />
-  <div>Home</div>
-    <div class="spacer"></div>
-</div>
-  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="text-center border border-light p-5">
-
-    <p class="h4 mb-4">Sign up</p>
-
-    <div class="form-row mb-4">
-        <div class="col">
-            <input type="text" formControlName="firstName" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
-        </div>
-        <div class="col">
-            <input type="text" formControlName="lastName" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
-        </div>
-        <div class="col">
-          <input type="email" formControlName="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
-        </div>
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-toolbar class=" abslt" color="primary">
+  <mat-toolbar-row class="justify-cont">
+    <button [routerLink]="['/home']" mat-raised-button>Home</button>
+    <button [routerLink]="['/login']" mat-raised-button>Logout</button>
+     <!-- <span>HOME</span>
+     <span><a href="/">HOME</a></span>
+     <span class="spacer"></span>
+     <a  mat-button  routerLink="/register">Register</a>
+     <a  mat-button  routerLink="/login">Login</a> -->
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="d-flex align-items-center h-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-5">
+        <mat-card>
+          <h3 class="text-center">Angular 9 Material Registration Login Example</h3>
+        </mat-card>
+      </div>
     </div>
-
-
-
-    <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
-  </form>
+  </div>
+</div>
