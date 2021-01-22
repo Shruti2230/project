@@ -1,0 +1,46 @@
+<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Sign Up</mat-card-title>
+    </mat-card-header>
+
+    <form [formGroup]="registerForm" class="my-form" (ngSubmit)="Submit()">
+      <!-- Form Fields HERE -->
+      <mat-card-content>
+        <mat-form-field class="full-width">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="First name" name="firstname" required>
+          <mat-error *ngIf="data.firstname.errors?.required">First Name is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Last Name" name="lastname" required>
+          <mat-error *ngIf="data.lastname.errors?.required">Last Name is required</mat-error>
+        </mat-form-field>
+
+        <!-- <mat-form-field class="full-width">
+          <mat-label>Address</mat-label>
+          <input matInput placeholder="Address" name="address" required>
+        </mat-form-field> -->
+
+        <mat-form-field class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" name="email" required>
+          <mat-error *ngIf="data.email.errors?.required">Email is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Password" name="password" required>
+          <mat-error *ngIf="data.password.errors?.required">Password is required</mat-error>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <!-- REGISTER BUTTON -->
+        <button mat-raised-button color="primary" class="btn-block" onclick="">Register</button>
+        <a [routerLink]="['/login']" class="btn-block" mat-raised-button color="primary">Cancel</a>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>
